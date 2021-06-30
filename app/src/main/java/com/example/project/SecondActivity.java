@@ -7,24 +7,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class activity2 extends AppCompatActivity {
+public class SecondActivity extends AppCompatActivity {
 
-    TextView welcoming,amountToPaid;
-    CheckBox tv,computer,tablet,phone;
-    RadioButton creditCard, payAtTheDoor,test;
-    Button buttonPurchase;
-    RadioGroup radiogroup;
-    int total = 0;
+        private TextView welcoming,amountToPaid;
+    private CheckBox tv,computer,tablet,phone;
+    private RadioButton creditCard, payAtTheDoor,test;
+   private Button buttonPurchase;
+   private RadioGroup radiogroup;
+   private int total = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_2);
+        setContentView(R.layout.activity_second);
 
         welcoming = findViewById(R.id.txtWelcoming);
         amountToPaid = findViewById(R.id.txtAmount);
@@ -49,7 +48,7 @@ public class activity2 extends AppCompatActivity {
             public void onClick(View v) {
                int selectedRadio = radiogroup.getCheckedRadioButtonId();
                test = findViewById(selectedRadio);
-               Toast.makeText(activity2.this,"You are going to pay "+ test.getText(),Toast.LENGTH_LONG).show();
+               Toast.makeText(SecondActivity.this,"You are going to pay "+ test.getText(),Toast.LENGTH_LONG).show();
             }
         });
     }

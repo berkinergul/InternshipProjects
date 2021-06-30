@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this,"Please enter your informations!!",Toast.LENGTH_LONG).show();
                 }
                 else if(userMail.equals("example@gmail.com")&& userPassword.equals("1234")){
-                    Intent intent = new Intent(MainActivity.this,activity2.class);
+                    Intent intent = new Intent(MainActivity.this, SecondActivity.class);
                     intent.putExtra("Mail",userMail);
                     startActivity(intent);
                 }
